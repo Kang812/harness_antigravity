@@ -43,10 +43,32 @@ Anti-Gravity를 위한 Harness
    ```bash
    # Antigravity CLI 구동
    agy
-   
    # CLI 프롬프트에서 /harness 커맨드와 함께 생성 요구사항 입력
    /harness fastapi를 사용해서 api 만들어줘
    ```
+
+---
+
+#### 🌍 전역 스킬 구성 방법 (Global Skills Setup)
+
+Antigravity CLI가 모든 프로젝트 워크스페이스에서 이 레포지토리의 스킬들(`fable`, `fable_ko`, `harness`)을 인식할 수 있도록 전역 스킬 디렉토리(`~/.gemini/antigravity-cli/skills`)로 링크하거나 복사할 수 있습니다.
+
+이 프로젝트에 포함된 [install_global.sh](file:///home/kwbyun/workspace/harness_antigravity/install_global.sh) 스크립트를 사용하여 손쉽게 구성할 수 있습니다.
+
+1. **스크립트 실행 권한 부여 및 실행**
+   ```bash
+   # 스크립트 실행 권한 부여
+   chmod +x install_global.sh
+
+   # 심볼릭 링크로 전역 등록 (권장 - 레포지토리 업데이트 시 전역 스킬도 자동 갱신됨)
+   ./install_global.sh --symlink
+
+   # 또는 스킬 폴더를 직접 전역 경로로 복사하여 등록
+   ./install_global.sh --copy
+   ```
+
+2. **적용 여부 확인**
+   * 설치 완료 후, Antigravity CLI가 구동될 때 `fable`, `fable_ko`, `harness` 스킬을 전역 스킬로 자동 로드하여 사용할 수 있습니다.
 
 ---
 
@@ -67,6 +89,7 @@ Anti-Gravity를 위한 Harness
 
 | 날짜 | 변경 내용 | 대상 | 사유 |
 | :--- | :--- | :--- | :--- |
+| 2026-06-17 | 전역 스킬 설치 스크립트 추가 및 README 업데이트 | [install_global.sh](file:///home/kwbyun/workspace/harness_antigravity/install_global.sh), [README.md](file:///home/kwbyun/workspace/harness_antigravity/README.md) | Antigravity CLI 전역 스킬(`~/.gemini/antigravity-cli/skills`) 등록을 자동화하는 스크립트 구축 및 문서화 |
 | 2026-06-17 | `fable` 스킬 및 레퍼런스 추가 | [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/fable/SKILL.md) | Claude Fable 5 에뮬레이션 및 아티팩트 고급 스펙 연동 스킬 구축 |
 | 2026-06-17 | `fable_ko` 한국어 번역 스킬 및 레퍼런스 추가 | [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/fable_ko/SKILL.md) | 한국어 환경에서의 Claude Fable 5 스킬 적용 및 연동 지침 제공 |
 | 2026-06-17 | Antigravity 아키텍처 호환성 패치 | 전체 (fable 및 fable_ko) | `end_conversation` 도구, 로컬 파일 시스템, 인용 태그 및 저장소 지침을 Antigravity/Gemini 환경에 맞추어 보완 |
