@@ -60,3 +60,15 @@ Anti-Gravity를 위한 Harness
    * 하네스가 구동되면 `design-expert`(UI 구현)와 `design-qa`(정합성 및 가독성 검증) 등 역할별 전문 에이전트들이 공유 태스크 파일(`_workspace/tasks.json`)을 기반으로 실시간 피드백을 주고받으며 코드를 빌드하고 튜닝합니다.
 4. **점진적 피드백 반영 및 진화**
    * 완료 후 추가 개선 사항을 전달하면 하네스가 피드백 유형을 식별하여 에이전트 정의, 스킬 파일, `README.md` 변경 이력을 즉각적이고 유기적으로 업데이트하며 진화합니다.
+
+---
+
+## 🚀 하네스 구성 변경 이력 (Harness Changelog)
+
+| 날짜 | 변경 내용 | 대상 | 사유 |
+| :--- | :--- | :--- | :--- |
+| 2026-06-17 | `fable` 스킬 및 레퍼런스 추가 | [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/fable/SKILL.md) | Claude Fable 5 에뮬레이션 및 아티팩트 고급 스펙 연동 스킬 구축 |
+| 2026-06-17 | `fable_ko` 한국어 번역 스킬 및 레퍼런스 추가 | [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/fable_ko/SKILL.md) | 한국어 환경에서의 Claude Fable 5 스킬 적용 및 연동 지침 제공 |
+| 2026-06-17 | Antigravity 아키텍처 호환성 패치 | 전체 (fable 및 fable_ko) | `end_conversation` 도구, 로컬 파일 시스템, 인용 태그 및 저장소 지침을 Antigravity/Gemini 환경에 맞추어 보완 |
+
+
