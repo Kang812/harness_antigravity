@@ -9,17 +9,17 @@ description: "데이터 분석 프로젝트의 탐색적 분석(EDA), 데이터 
 
 ## 실행 모드
 
-**에이전트 팀** — 5명이 SendMessage로 직접 통신하며 교차 검증한다.
+**에이전트 팀** — 5명이 send_message로 직접 통신하며 교차 검증한다.
 
 ## 에이전트 구성
 
 | 에이전트 | 파일 | 역할 | 타입 |
 |---------|------|------|------|
-| explorer | `.claude/agents/explorer.md` | 탐색적 분석, 데이터 프로파일링 | general-purpose |
-| cleaner | `.claude/agents/cleaner.md` | 데이터 정제, 변환 파이프라인 | general-purpose |
-| analyst | `.claude/agents/analyst.md` | 통계 분석, 인사이트 도출 | general-purpose |
-| visualizer | `.claude/agents/visualizer.md` | 차트 설계, 시각화 코드 생성 | general-purpose |
-| reporter | `.claude/agents/reporter.md` | 최종 보고서 작성, 품질 검증 | general-purpose |
+| explorer | `.agents/explorer.md` | 탐색적 분석, 데이터 프로파일링 | general-purpose |
+| cleaner | `.agents/cleaner.md` | 데이터 정제, 변환 파이프라인 | general-purpose |
+| analyst | `.agents/analyst.md` | 통계 분석, 인사이트 도출 | general-purpose |
+| visualizer | `.agents/visualizer.md` | 차트 설계, 시각화 코드 생성 | general-purpose |
+| reporter | `.agents/reporter.md` | 최종 보고서 작성, 품질 검증 | general-purpose |
 
 ## 워크플로우
 
@@ -86,7 +86,7 @@ description: "데이터 분석 프로젝트의 탐색적 분석(EDA), 데이터 
 | 전략 | 방식 | 용도 |
 |------|------|------|
 | 파일 기반 | `_workspace/` 디렉토리 | 주요 산출물 및 데이터 저장 |
-| 메시지 기반 | SendMessage | 핵심 정보 전달, 수정 요청 |
+| 메시지 기반 | send_message | 핵심 정보 전달, 수정 요청 |
 | 코드 기반 | `_workspace/scripts/` | 재현 가능한 분석 스크립트 |
 
 파일명 컨벤션: `{순번}_{산출물}.{확장자}`
@@ -133,5 +133,5 @@ description: "데이터 분석 프로젝트의 탐색적 분석(EDA), 데이터 
 
 | 스킬 | 경로 | 강화 대상 에이전트 | 역할 |
 |------|------|-----------------|------|
-| statistical-tests-selector | `.claude/skills/statistical-tests-selector/skill.md` | analyst | 검정 선택 트리, t-검정/ANOVA/카이제곱, 효과 크기, 검정력 |
-| visualization-chooser | `.claude/skills/visualization-chooser/skill.md` | visualizer | 차트 유형 매트릭스, matplotlib/seaborn/plotly 패턴, 안티패턴 |
+| statistical-tests-selector | `.agents/skills/statistical-tests-selector/skill.md` | analyst | 검정 선택 트리, t-검정/ANOVA/카이제곱, 효과 크기, 검정력 |
+| visualization-chooser | `.agents/skills/visualization-chooser/skill.md` | visualizer | 차트 유형 매트릭스, matplotlib/seaborn/plotly 패턴, 안티패턴 |

@@ -93,5 +93,6 @@ Antigravity CLI가 모든 프로젝트 워크스페이스에서 이 레포지토
 | 2026-06-17 | `fable` 스킬 및 레퍼런스 추가 | [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/fable/SKILL.md) | Claude Fable 5 에뮬레이션 및 아티팩트 고급 스펙 연동 스킬 구축 |
 | 2026-06-17 | `fable_ko` 한국어 번역 스킬 및 레퍼런스 추가 | [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/fable_ko/SKILL.md) | 한국어 환경에서의 Claude Fable 5 스킬 적용 및 연동 지침 제공 |
 | 2026-06-17 | Antigravity 아키텍처 호환성 패치 | 전체 (fable 및 fable_ko) | `end_conversation` 도구, 로컬 파일 시스템, 인용 태그 및 저장소 지침을 Antigravity/Gemini 환경에 맞추어 보완 |
+| 2026-06-18 | Antigravity CLI 호환성 개선 패치 (data_analysis, harness) | [skill.md](file:///home/kwbyun/workspace/harness_antigravity/skills/data_analysis/skill.md), [SKILL.md](file:///home/kwbyun/workspace/harness_antigravity/skills/harness/SKILL.md) | data_analysis 및 harness 스킬 내의 Claude 전용 디렉토리 경로(.claude/agents/, .claude/skills/), 도구명(SendMessage), 규칙 파일(CLAUDE.md)을 Antigravity 구조(.agents/, .agents/skills/, send_message, AGENTS.md)에 맞추어 수정 |
 
 
